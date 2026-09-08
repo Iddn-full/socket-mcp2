@@ -35,6 +35,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@socketregistry'
           cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
       - run: pnpm install --frozen-lockfile
       - name: Build package
         run: pnpm run build
